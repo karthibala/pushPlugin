@@ -125,13 +125,13 @@ public class GCMIntentService extends GCMBaseIntentService {
 		if(extras.getString("images") !=null){
 			mBuilder.setStyle(bigPicStyle);
 		}else{
-			mBuilder.setSubText(extras.getString("message"));
+			//mBuilder.setSubText(extras.getString("message"));
 		}       
 		        
 		String message = extras.getString("message");
 		if (message != null) {
 			mBuilder.setContentText(message);
-			//mBuilder.setSubText(extras.getString("mContent"));
+			mBuilder.setSubText(extras.getString("mContent"));
 		} else {
 			mBuilder.setContentText("<missing message content>");
 		}
